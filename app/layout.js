@@ -1,5 +1,8 @@
 import './globals.css';
 import { Oswald } from 'next/font/google';
+import Script from 'next/script';
+import Head from 'next/head';
+
 import Header from '@/components/Header/Header';
 import EmailButton from '@/components/EmailButton/EmailButton';
 import PhoneButton from '@/components/PhoneButton/PhoneButton';
@@ -11,14 +14,17 @@ const oswald = Oswald({
   display: 'swap',
 });
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <head>
+      <Head>
         <link rel="icon" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="UTF-8" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="robots" content="index, follow" />
 
-        {/* Préchargement optimisé de Google Fonts */}
+        {/* Preload Google Fonts */}
         <link
           rel="preload"
           href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
@@ -31,12 +37,24 @@ export default function RootLayout({ children }) {
             rel="stylesheet"
           />
         </noscript>
+      </Head>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charSet="UTF-8" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="robots" content="index, follow" />
-      </head>
+      {/* Google Ads Tag */}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17226749834"
+      />
+      <Script
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17226749834');
+          `,
+        }}
+      />
 
       <body className={oswald.className}>
         <Header />
