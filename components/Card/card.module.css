@@ -1,0 +1,32 @@
+.card {
+    width: 320px;
+    border-radius: 20px;
+    background-color: var(--grey);
+    margin: 20px;
+    transition: .4s ease-in-out;  
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.h3 {
+    margin: 10px 0;
+    color: #E05C4E;  
+}
+
+.cardTxt {
+    margin: 10px;
+    height: 200px;
+    background-color: var(--grey);
+}
+
+.image {
+   border-radius: 20px 20px 0 0;
+}
+
+.pCard {
+    color: white;
+}

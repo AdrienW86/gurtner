@@ -1,0 +1,51 @@
+.description {
+    padding: 40px auto;
+    background-color: white; 
+}
+
+.box {
+    z-index: 2;
+    color: var(--grey);
+}
+
+.h2 {
+    text-decoration: underline;
+    z-index: 2;
+    padding: 8px;
+    margin-top: 20px;
+    font-size: 1.8em;
+    text-align: center;
+    font-weight: lighter;
+    color: var(--red);  
+}
+
+.intro {
+    padding: 10px;
+    border-radius: 20px;
+    margin: 40px auto;
+    width: 80%;
+    display: flex;
+    font-size: 1.2em;;
+    text-align: center;
+    border: 2px solid var(--grey);
+    line-height: 1.7em;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center; 
+    transition: .4s ease-in-out;
+    background-color: white;
+}
+
+.intro:hover {
+    cursor: pointer;
+    color: white;
+    background-color: var(--grey);
+}
+
+.localisation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 40px auto; 
+}
