@@ -3,8 +3,8 @@ import Link from 'next/link'
 import styles from '@/app/not-found.module.css' 
 
 export const metadata = {
-  title: 'Page non trouvée - Toiture 66',
-  description: 'Oups ! La page que vous recherchez n’existe pas. Retournez à l’accueil de Toiture 66, couvreur à Perpignan.',
+  title: 'Page non trouvée - Entreprise Gurtner',
+  description: 'Oups ! La page que vous recherchez n’existe pas. Retournez à l’accueil de Entreprise Gurtner, couvreur à Nantes.',
 };
 
 export default function NotFound() {
