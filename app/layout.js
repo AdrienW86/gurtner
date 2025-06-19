@@ -2,10 +2,7 @@ import './globals.css';
 import { Oswald } from 'next/font/google';
 import Script from 'next/script';
 import Head from 'next/head';
-
 import Header from '@/components/Header/Header';
-import EmailButton from '@/components/EmailButton/EmailButton';
-import PhoneButton from '@/components/PhoneButton/PhoneButton';
 import Footer from '@/components/Footer/Footer';
 
 const oswald = Oswald({
@@ -59,8 +56,6 @@ export default function RootLayout({ children }) {
       <body className={oswald.className}>
         <Header />
         {children}
-        <EmailButton />
-        <PhoneButton />
         <Footer />
       </body>
     </html>
